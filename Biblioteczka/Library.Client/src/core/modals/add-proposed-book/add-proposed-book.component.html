@@ -1,0 +1,64 @@
+
+
+<!-- Add/Edit Book -->
+<div class="modal text-white go-down-animation" id="addProposedBook" tabIndex="7" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-fullscreen">
+		<div class="modal-content modalBack">
+
+			<div class="modal-header">
+				<h2 class="modal-title w-100 text-center" id="exampleModalLabel">Zaproponuj książkę</h2>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body pb-0">
+				<div class="row m-0">
+					<div class="col-sm-5 d-block col-height d-flex align-items-center">
+						<div class="w-100">
+						<div class="pb-2 d-flex justify-content-between align-items-center">
+							<div>Tytuł<span class="text-danger">*</span>: </div>
+							<input type="text" [(ngModel)]="proposedBook.title" placeholder="" class="form-control text-white d-inline input-width" />
+						  </div>
+						  <div class="py-2 d-flex justify-content-between align-items-center">
+							<div> Autorzy<span class="text-danger">*</span>: </div>
+                            <ng-multiselect-dropdown class="input-width" 
+                            [placeholder]="'Wybierz kategorie'"
+                            [settings]="dropdownSettings" 
+                            [data]="authors" 
+                            [(ngModel)]="selectedAuthors">
+                        </ng-multiselect-dropdown>						  </div>
+						  <div class="py-2 d-flex justify-content-between align-items-center">
+							<div>Kategorie<span class="text-danger">*</span>: </div>
+                            <ng-multiselect-dropdown class="input-width" 
+                            [placeholder]="'Wybierz kategorie'"
+                            [settings]="dropdownSettings" 
+                            [data]="categories" 
+                            [(ngModel)]="selectedCategories">
+                        </ng-multiselect-dropdown>
+						  </div>
+						  </div>
+					</div>
+                    <div class="col-sm-7 d-block justify-content-center col-height d-flex align-items-center">
+                        <div class="container d-flex justify-content-center">
+                            <div class="w-100">
+                            <div class="d-flex justify-content-center">
+                            <img [src]="proposedBook.urlLink" class="img-modal">
+                            </div>         
+							<div class="d-flex justify-content-center">       
+                            <div class="d-flex mt-4 mb-4 box-width">
+                            <input type="text" [(ngModel)]="proposedBook.urlLink" placeholder=""
+                                class="form-control text-white" />
+                                <span class="btn btn-style text-center">URL</span>
+                            </div>
+                            </div>
+							</div>
+                        </div>
+    
+                    </div>
+				</div>
+
+				<div class="modal-footer d-sm-flex justify-content-center">
+					<button type="button" class="btn" data-bs-dismiss="modal" (click)="proposeBook(proposedBook)">Zaproponuj</button>
+				</div>
+			</div>
+		</div>
+	</div>
+

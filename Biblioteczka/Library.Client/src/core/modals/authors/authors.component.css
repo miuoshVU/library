@@ -1,0 +1,105 @@
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+.box {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 3px solid gray;
+}
+
+a {
+    text-decoration: none;
+    bottom: 28px;
+    right: 60px;
+    color: unset;
+}
+
+.pencil-color {
+    color: #FD6E00
+}
+
+i {
+    cursor: pointer;
+}
+
+i:active {
+    transform: scale(1.05);
+}
+
+.inner-box {
+    height: 100%;
+    width: 8%;
+    border-left: 3px solid gray;
+    ;
+}
+
+.fa-circle-plus {
+    font-size: 30px;
+}
+
+i {
+    font-size: 20px;
+}
+
+button {
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+.col1-width {
+    width: 76%;
+}
+
+.img-modal {
+    width: 100%;
+    height: 600px;
+}
+
+button {
+    min-width: 130px;
+    min-height: 40px;
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+.btn-close {
+    min-width: unset;
+    min-height: unset;
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+.book-img {
+    height: 600px;
+    width: 60%;
+}
+
+.input-width {
+    width: 60%;
+}
+
+input[type="text"],
+textarea,
+select {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+textarea:focus {
+    color: black !important;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    color: black !important;
+    background: white;
+}
+
+.col-height {
+    height: 650px
+}

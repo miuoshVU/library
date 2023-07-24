@@ -1,0 +1,40 @@
+@media only screen and (max-width: 576px) {
+  img {
+    width: 100% !important;
+  }
+}
+
+a {
+  color: black;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+button {
+  color: white;
+  background-color: rgba(55, 168, 60, 0.7);
+}
+
+button:hover {
+  background-color: rgba(55, 168, 60);
+  transition: all 0.2s;
+}
+
+img {
+  width: 50%;
+}
+
+button {
+  font-size: 1.25rem;
+}
+
+.page-style {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(77, 200, 29);
+  background: linear-gradient(135deg, rgba(77, 200, 29, 1) 0%, rgba(230, 230, 230, 1) 50%);
+}

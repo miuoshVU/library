@@ -1,0 +1,310 @@
+.row_poster {
+    width: 100%;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster:hover {
+    transform: scale(1.09);
+}
+
+.row_poster::-webkit-scrollbar {
+    display: none;
+}
+
+.row_posterLarge {
+    height: 500px;
+    width: 300px;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .row_posterLarge {
+        max-height: 300px;
+        max-width: 200px;
+    }
+}
+
+.row {
+    color: white;
+    margin-left: 20px;
+    margin-right: 0 !important;
+}
+
+
+.banner {
+    color: white;
+    position: relative;
+    height: 448px;
+}
+
+.banner::before {
+    background-image: url('../../assets/images/image1books-e1588860766439.jpeg');
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+}
+
+.banner_contents {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+@media (max-width: 576px) {
+    .font-dim {
+        font-size: 15px;
+    }
+
+    .login-body {
+        margin-top: 0 !important;
+    }
+}
+
+.banner_title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.pad {
+    padding: 68px;
+}
+
+.banner_description {
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 180px;
+}
+
+.banner_button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.banner_button:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+
+.nav_logo {
+    width: 250px;
+    object-fit: contain;
+}
+
+.nav_avatar {
+    width: 30px;
+    object-fit: contain;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.nav_black {
+    /* background-color: #37a83c; */
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+
+input[type="search"]::placeholder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marg {
+    margin-top: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .marg {
+        width: 70% !important;
+    }
+}
+
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+a:focus {
+    outline: none;
+}
+
+.fade {
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111)
+}
+
+a.row_poster {
+    display: flex;
+    justify-content: center;
+}
+
+.login-body {
+    color: #333;
+    padding: 0 5%;
+    width: 40%;
+    margin: auto;
+}
+
+.form-control:focus {
+    color: black;
+    background-color: #fff;
+    outline: none;
+}
+
+.form-control {
+    color: #fff;
+    border-color: unset;
+}
+
+.hybrid-login-form.hybrid-login-form-signup {
+    min-height: 550px;
+}
+
+.hybrid-login-form {
+    background-color: rgba(0, 0, 0, .75);
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 20px;
+}
+
+.hybrid-login-form h2 {
+    color: #fff;
+    font-size: 39px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.login-form {
+    margin-bottom: 0;
+}
+
+.login-header {
+    position: absolute;
+    left: 0;
+    object-fit: contain;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media (max-width: 1000px) {
+    .login-body {
+        width: 60%
+    }
+}
+
+
+@media (max-width: 800px) {
+    .login-body {
+        width: 80%
+    }
+}
+
+@media (max-width: 576px) {
+    .login-body {
+        width: 100%;
+        margin-top: 7rem;
+    }
+
+    .marg {
+        width: 70% !important;
+    }
+
+    .pad {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 35px !important;
+    }
+}
+
+
+button {
+    color: white;
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+input[type="checkbox"]::before {
+    background-color: white
+}
+
+input:checked {
+    background-color: rgba(55, 168, 60);
+}
+
+input:checked {
+    border-color: unset;
+}
+
+.input-pad {
+    padding-bottom: 16px;
+}
+
+.input-style {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+    height: 50px
+}
+
+.input-style {
+    color: #fff;
+    background: #333;
+    border: 0;
+    height: 50px
+}
+
+.container-1-pad {
+    padding-bottom: 40px;
+}
+
+button {
+    border: 0;
+    height: 50px;
+}

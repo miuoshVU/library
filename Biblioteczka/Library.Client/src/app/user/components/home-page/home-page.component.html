@@ -1,0 +1,212 @@
+<div class="banner" id="banner">
+  <div class="banner_contents text-center text-sm-start">
+    <h1 class="banner_title go-down-animation position-relative"> Witaj {{name}}! </h1>
+    <h2 class="go-down-animation position-relative"> Co chciałbyś dzisiaj przeczytać?</h2>
+    <div class="align-input position-relative">
+      <form class="w-25 marg input-width d-flex go-left-right-animation">
+        <div class="w-100">
+          <input id="search-bar" class="form-control mr-sm-2 pad" value="{{input}}" (keyup)="searchBook($event.target)"
+            type="text" placeholder="Szukaj">
+          <ul id="close">
+            <li *ngFor="let bookName of bookNames" data-bs-toggle="modal" (click)="getBookInstance(bookName.id)"
+              [attr.data-bs-target]="'#bookModal'+bookName.id" click>
+              {{bookName.title}}
+            </li>
+          </ul>
+        </div>
+        <span class="input-group-text border-0 d-flex align-items-start mt-1" id="search-addon">
+          <i class="fas fa-search text-white"></i>
+        </span>
+      </form>
+    </div>
+  </div>
+
+  <div class="banner_fadeBottom"></div>
+</div>
+<div class="row">
+  <h2 id="booked">
+    Wypożyczone książki
+  </h2>
+  <div class="row_posters">
+    <div *ngFor="let borrowedBook of borrowedBooks">
+      <a class="row_poster" data-bs-toggle="modal" (click)="returnRemainingDays(borrowedBook)"
+        [attr.data-bs-target]="'#borrowedBook'+borrowedBook.id">
+        <img [src]="borrowedBook.book.cover" alt="" class="row_posterLarge" />
+      </a>
+      <!-- Borrowed Book Modal -->
+      <div class="modal text-white go-down-animation" [id]="'borrowedBook'+borrowedBook.id" tabIndex="8"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-scrollable">
+          <div class="modal-content modalBack">
+            <div class="container position-relative">
+              <div class="position-absolute">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal">
+                  <fa-icon [icon]="faArrowLeft"> </fa-icon>
+                </a>
+              </div>
+              <img [src]="borrowedBook.book.cover" class="img-modal">
+            </div>
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel"></h2>
+            </div>
+            <div class="modal-body">
+              <span> Pozostało: {{days}} dni</span>
+              <br>
+            </div>
+            <div class="modal-footer d-sm-flex justify-content-center">
+              <button class="btn" (click)="prolongBook(1)" data-bs-dismiss="modal"> Przedłuż</button>
+              <button class="btn" data-bs-target="#scanner" data-bs-toggle="modal">Zwróć</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2 class="d-flex justify-content-between">
+    <a data-bs-toggle="modal" data-bs-target="#allBooks">
+      Wszystkie książki
+    </a>
+    <a data-bs-toggle="modal" data-bs-target="#allBooks">
+      <fa-icon class="d-flex align-items-center icon-margin" id="#all" [icon]="faArrowRight"></fa-icon>
+    </a>
+  </h2>
+  <div class="row_posters">
+    <div *ngFor="let book of books">
+      <a class="row_poster" data-bs-toggle="modal" (click)="getBookInstance(book.id)"
+        [attr.data-bs-target]="'#'+'bookModal'+book.id">
+        <img [src]="book.cover" alt="" class="row_posterLarge" />
+      </a>
+
+
+
+      <!-- All Books Modal -->
+      <div class="modal text-white modal-animation" id="allBooks" tabindex="7" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+          <div class="modal-content modalBack">
+
+            <div class="modal-header">
+              <h1 class="modal-title" id="exampleModalLabel">Wszystkie książki</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-4 m-0">
+                <div *ngFor="let book of books" class="col-lg-3 col-md-4 col-6 mb-4">
+                  <a class="row_poster" data-bs-toggle="modal" data-bs-toggle="modal"
+                    [attr.data-bs-target]="'#'+'bookModal'+book.id" (click)="setBackId('allBooks')">
+                    <img [src]="book.cover" alt="" class="row_posterLarge1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Modal -->
+
+      <div class="modal text-white modal-animation" [attr.id]="'bookModal'+book.id" tabIndex="9"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-scrollable modal-dialog-centered">
+          <div class="modal-content modalBack">
+            <div class="container position-relative">
+              <div class="position-absolute">
+                <a [attr.data-bs-target]="'#'+backId" data-bs-toggle="modal">
+                  <fa-icon [icon]="faArrowLeft" class="font-s" data-bs-dismiss="modal"> </fa-icon>
+                </a>
+              </div>
+              <img [src]="book.cover" class="img-modal">
+            </div>
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">{{book.title}}</h2>
+            </div>
+            <div class="modal-body">
+              <div class="row m-0">
+                <div class="col">
+                  <span> Autor: </span>
+                  <br>
+                  <div *ngFor="let author of book.authors">
+                    {{author.firstName}}
+                    {{author.lastName}}
+                  </div>
+                  <span> Kategorie: </span>
+                  <br>
+                  <div *ngFor="let category of book.categories">
+                    {{category.name}}
+                  </div>
+                </div>
+                <div class="col">
+                  <span> Opis: </span>
+                  <br>
+                  {{book.description}}
+                </div>
+              </div>
+              <br>
+              <div *ngFor="let bookInstance of bookInstances; let i = index" class="col">
+                <div *ngIf="i === 0">
+                  <span> Dostępne: </span>
+                  {{'Budynek: ' + bookInstance.spot.building + ', Piętro: ' + bookInstance.spot.floor}}
+                  <span class="desc-color" *ngIf="bookInstance.spot.description">
+                    {{', Opis: ' + bookInstance.spot.description}}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+            </div>
+            <div class="modal-footer d-sm-flex justify-content-center">
+              <!-- <button class="btn" data-bs-target="#allBooks" data-bs-toggle="modal">Wróć do książek</button> -->
+              <button type="button" class="btn" data-bs-target="#scanner" data-bs-toggle="modal">Wypożycz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row row-margin">
+  <h2> Kategorie</h2>
+  <div class="row_posters">
+    <div *ngFor="let category of categories">
+      <a class="row_poster" (click)="getAllBooksCategory(category.id!)">
+        <img [src]="category.cover" alt="" data-bs-toggle="modal"
+          [attr.data-bs-target]="'#allBooksCategory'+category.id" class="row_posterLarge" />
+      </a>
+
+
+      <!-- All Books Modal -->
+      <div class="modal text-white modal-animation" [attr.id]="'allBooksCategory'+category.id" tabindex="7"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+          <div class="modal-content modalBack">
+
+            <div class="modal-header">
+              <h1 class="modal-title" id="exampleModalLabel">Wszystkie książki z {{category.name}}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-4 m-0">
+                <div *ngFor="let book of categoryBooks" class="col-lg-3 col-md-4 col-6 mb-4">
+                  <a (click)="setBackId('allBooksCategory'+category.id)" class="row_poster" data-bs-toggle="modal"
+                    data-bs-toggle="modal" [attr.data-bs-target]="'#'+'bookModal'+book.id">
+                    <img [src]="book.cover" alt="" class="row_posterLarge1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-navbar></app-navbar>

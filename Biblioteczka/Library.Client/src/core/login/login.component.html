@@ -1,0 +1,28 @@
+<div class="logBackg"></div>
+
+<div class="d-flex justify-content-center align-items-center container-body">
+    <div class="login-body">
+        <div class="hybrid-login-form hybrid-login-form-signup d-flex justify-content-center">
+            <div class="w-100 pad-sm">
+                <h1> Zaloguj się </h1>
+                <form class="login-form w-100">
+                    <div class="input-pad">
+                        <div class="form-outline">
+                            <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+                                placeholder="E-mail" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="pad-b">
+                        <div class="form-outline">
+                            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+                                placeholder="Hasło" class="form-control" />
+                        </div>
+                    </div>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-lg btn-style w-100 text-center"> Zaloguj
+                        się</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

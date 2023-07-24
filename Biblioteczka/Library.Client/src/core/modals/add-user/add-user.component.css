@@ -1,0 +1,35 @@
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+button {
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+input {
+    background-color: #333;
+    border: 0;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    background-color: white;
+    color: black !important;
+}
+
+select {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+select:focus {
+    color: black !important;
+    background: white;
+}

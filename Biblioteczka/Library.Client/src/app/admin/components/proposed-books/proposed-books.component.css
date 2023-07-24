@@ -1,0 +1,378 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+
+div::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+}
+
+.row_poster:hover {
+    transform: scale(1.09);
+}
+
+.row_poster::-webkit-scrollbar {
+    display: none;
+}
+
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+.row_posterLarge {
+    height: 500px;
+    width: 300px;
+    border-radius: 1rem;
+}
+
+.row_posterLarge1 {
+    height: 500px;
+    border-radius: 1rem;
+}
+
+@media (max-width: 576px) {
+    .align-input {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-width {
+        width: 70% !important;
+    }
+
+    #bookModalAll img {
+        height: 400px !important;
+    }
+
+    #bookModal img {
+        height: 400px !important;
+    }
+
+    #rentedBook img {
+        height: 400px !important;
+    }
+
+    .row_posterLarge {
+        max-height: 300px;
+        max-width: 200px;
+    }
+
+    .row_posterLarge1 {
+        height: 250px;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .input-width {
+        width: 50% !important;
+    }
+}
+
+.row {
+    color: white;
+    margin-left: 20px;
+    margin-right: 0 !important;
+}
+
+input[type="search"]::placeholder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marg {
+    margin-top: 5%;
+}
+
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+a:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.fade {
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111)
+}
+
+a.row_poster {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    position: fixed;
+    z-index: 5;
+    bottom: 70px;
+    right: 20px;
+    cursor: pointer;
+    width: 22px;
+    height: 2px;
+    background: none;
+    border: none;
+}
+
+.horizontal {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    bottom: 80px;
+    right: 20px;
+    background: #fff;
+}
+
+.vertical {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    bottom: 80px;
+    right: 20px;
+    background: #fff;
+    transform: rotate(90deg);
+}
+
+.open .horizontal {
+    transform: rotate(-45deg);
+}
+
+.open .vertical {
+    transform: rotate(45deg);
+}
+
+.tab {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.tab-header {
+    background-color: rgba(55, 168, 60, 0.4);
+}
+
+table {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+thead {
+    flex: 0 0 auto;
+}
+
+tbody {
+    flex: 1 1 auto;
+    display: block;
+    overflow-y: auto;
+    height: 400px;
+    overflow-x: hidden;
+}
+
+a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.table-hover tbody tr:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #343a40;
+
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    color: white;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd):hover>* {
+    color: black;
+}
+
+.container-gap {
+    margin-bottom: 70px;
+}
+
+fa-icon {
+    font-size: 20px;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    border-radius: 50%;
+}
+
+.col2-width {
+    width: 90px
+}
+
+.col3-width {
+    width: 140px
+}
+
+.modal-confirm {
+	color: #636363;
+	width: 400px;
+}
+
+.modal-confirm .modal-content {
+	padding: 20px;
+	border: none;
+	text-align: center;
+	font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+	border-bottom: none;
+	position: relative;
+}
+
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -2px;
+}
+
+.modal-confirm .modal-body {
+	color: #999;
+}
+
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	font-size: 13px;
+	padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+	color: #999;
+}
+
+.modal-confirm .icon-box {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 9;
+	text-align: center;
+	border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box i {
+	color: #f15e5e;
+	font-size: 46px;
+	display: inline-block;
+	margin-top: 13px;
+}
+
+.modal-confirm .btn,
+.modal-confirm .btn:active {
+	color: #fff;
+	border-radius: 4px;
+	transition: all 0.4s;
+	line-height: normal;
+	min-width: 120px;
+	border: none;
+	min-height: 40px;
+	margin: 0 5px;
+}
+
+.modal-confirm .btn-secondary:hover {
+	background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+	background: red;
+}
+
+.modal-confirm .btn-danger:hover,
+.modal-confirm .btn-danger:focus {
+	background: #ee3535;
+}
+
+.img-modal {
+	width: 100%;
+	height: 600px;
+}
+
+.btn-style {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    pointer-events: none;
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+button {
+	background-color: rgba(55, 168, 60, 0.7);
+}
+
+.btn-close {
+	min-width: unset;
+	min-height: unset;
+}
+
+button:hover {
+	background-color: rgba(55, 168, 60);
+	transition: all 0.2s;
+}
+
+.book-img {
+    height: 600px;
+    width: 60%;
+}
+
+@media (max-width: 991.98px) {
+    .book-img {
+        height: 600px !important;
+        width: 100% !important;
+    }
+}
+
+.input-width {
+	width: 60%;
+}
+
+.input-width2 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type="text"], textarea, select {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+textarea:focus {
+	color: black !important;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+	color: black !important;
+	background: white;
+}
+
+.col-height {
+	height: 650px
+}
+

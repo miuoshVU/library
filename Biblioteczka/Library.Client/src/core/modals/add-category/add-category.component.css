@@ -1,0 +1,41 @@
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+button,
+span {
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+input {
+    background-color: #333;
+    border: 0;
+    color: white;
+}
+
+.form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-style {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    pointer-events: none;
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+    background-color: white;
+    color: black !important;
+}
+
+.img-modal {
+    width: 100%;
+    height: 600px;
+}

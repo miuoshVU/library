@@ -1,0 +1,32 @@
+<div *ngFor="let author of authors">
+  <!-- Book Modal -->
+  <div class="modal text-white go-down-animation" [id]="'editModal'+author.id" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modalBack">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edytuj autora </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="pb-2 d-flex justify-content-between align-items-center mb-3">
+            <div>Imię autora: </div>
+            <input type="text" [(ngModel)]="author.firstName" placeholder=""
+              class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Nazwisko autora: </div>
+            <input type="text" [(ngModel)]="author.lastName" placeholder=""
+              class="form-control text-white d-inline w-50" />
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn" data-bs-dismiss="modal">Zamknij</button> -->
+          <button type="button" class="btn" data-bs-dismiss="modal" (click)="editAuthor(author)">Zapisz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

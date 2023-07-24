@@ -1,0 +1,127 @@
+<!-- All Books Modal -->
+<div class="modal text-white modal-animation" id="allBooksEdit" tabindex="7" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+        <div class="modal-content modalBack">
+
+            <div class="modal-header position-relative">
+                <h1 class="modal-title" id="exampleModalLabel">Wszystkie książki</h1>
+                <a class="position-absolute" data-bs-target="#addBook" data-bs-toggle="modal"><i
+                        class="fa-solid fa-circle-plus"></i></a>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4 m-0">
+                    <div *ngFor="let book of books" class="col-lg-3 col-md-4 col-6 mb-4 p-0">
+                        <div class="row_poster container position-relative p-2">
+                            <div class="position-absolute align-icons">
+                                <div>
+                                    <a data-bs-toggle="modal" [attr.data-bs-target]="'#editBook'+book.id"
+                                        (click)="getInfo(book)">
+                                        <fa-icon class="pencil-color" [icon]="faPencil"> </fa-icon>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a class="d-flex justify-content-center" (click)="deleteBook(book.id)">
+                                        <fa-icon class="trash-color" [icon]="faTrash"> </fa-icon>
+                                    </a>
+                                </div>
+                            </div>
+                            <img [src]="book.cover" alt="" class="row_posterLarge1" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Add/Edit Book -->
+<div *ngFor="let book of books" class="col-lg-3 col-md-4 col-6 mb-4">
+    <div class="modal text-white go-down-animation" [id]="'editBook'+book.id" tabIndex="7"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content modalBack">
+
+                <div class="modal-header">
+                    <h2 class="modal-title w-100 text-center" id="exampleModalLabel">Informacje o książce</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-0">
+                    <div class="row m-0">
+                        <div class="col-5 col-height d-flex align-items-center">
+                            <div class="w-100">
+                                <div class="pb-2 d-flex justify-content-between align-items-center">
+                                    <div>Tytuł: </div>
+                                    <input type="text" placeholder="" [(ngModel)]="book.title"
+                                        class="form-control text-white d-inline input-width" />
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    <div> Autorzy: </div>
+                                    <ng-multiselect-dropdown [placeholder]="'Wybierz autorów'" class="input-width"
+                                        [settings]="dropdownSettings" [data]="authors" [(ngModel)]="selectedAuthors">
+                                    </ng-multiselect-dropdown>
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    <div>Kategorie: </div>
+                                    <ng-multiselect-dropdown [placeholder]="'Wybierz kategorie'" class="input-width"
+                                        [settings]="dropdownSettings" [data]="categories"
+                                        [(ngModel)]="selectedCategories">
+                                    </ng-multiselect-dropdown>
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    ISBN:
+                                    <input type="text" placeholder="" [(ngModel)]="book.iSBN"
+                                        class="form-control text-white d-inline input-width" />
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    Wydawca:
+                                    <input type="text" placeholder="" [(ngModel)]="book.publisher"
+                                        class="form-control text-white d-inline input-width" />
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    Rok publikacji:
+                                    <input type="text" placeholder="" [(ngModel)]="book.yearOfPublication"
+                                        class="form-control text-white d-inline input-width" />
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    Ilość stron:
+                                    <input type="text" placeholder="" [(ngModel)]="book.pages"
+                                        class="form-control text-white d-inline input-width" />
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    Opis:
+                                    <textarea type="text" row="4" placeholder="" [(ngModel)]="book.description"
+                                        class="form-control text-white d-inline input-width"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 col-height d-flex align-items-center">
+                            <div class="container d-flex justify-content-center w-100">
+                                <div class="w-100">
+                                    <div class="d-flex justify-content-center w-100">
+                                        <img [src]="book.cover" class="book-img">
+                                    </div>
+                                    <div class="d-flex justify-content-center w-100">
+                                        <div class="d-flex mt-4 mb-4 box-width">
+                                            <input type="text" [(ngModel)]="book.cover" placeholder=""
+                                                class="form-control text-white input-width2" />
+                                            <span class="btn btn-style text-center">URL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer d-sm-flex justify-content-center">
+                        <button type="button" data-bs-dismiss="modal" class="btn" (click)="editBook(book)">Zapisz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

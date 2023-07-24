@@ -1,0 +1,26 @@
+.footer-container {
+  /* height: 100%; */
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.625rem;
+}
+
+.version {
+  padding: 0 1rem 0 3rem;
+}
+
+.license {
+  text-align: center;
+  line-height: 1.5;
+  padding-left: 0.5rem;
+}
+
+.license-title {
+  margin: 0;
+}

@@ -1,0 +1,5 @@
+./bin
+./obj
+
+# System files
+.DS_Store

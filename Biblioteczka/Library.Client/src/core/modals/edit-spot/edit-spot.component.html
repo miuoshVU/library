@@ -1,0 +1,40 @@
+<div *ngFor="let spot of spots">
+  <!-- Book Modal -->
+  <div class="modal text-white go-down-animation" [id]="'editSpot'+spot.id" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modalBack">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edytuj miejsce </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="pb-2 d-flex justify-content-between align-items-center mb-3">
+            <div>Nazwa miejsca: </div>
+            <input type="text" [(ngModel)]="spot.name" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center mb-3">
+            <div> Budynek: </div>
+            <input type="text" [(ngModel)]="spot.building" placeholder=""
+              class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center mb-3">
+            <div>Nr piętra: </div>
+            <input type="text" [(ngModel)]="spot.floor" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div> Opis: </div>
+            <input type="text" [(ngModel)]="spot.description" placeholder=""
+              class="form-control text-white d-inline w-50" />
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" (click)="editSpot(spot)" data-bs-dismiss="modal">Zapisz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

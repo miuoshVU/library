@@ -1,0 +1,52 @@
+<!-- User nav -->
+<div *ngIf="role === 'user'">
+    <nav class="fa nav-width" id="nav">
+        <a (click)="onClick('banner')">
+            <fa-icon [icon]="faArrowUp"></fa-icon>
+        </a>
+        <a (click)="onClick('footer')">
+            <fa-icon [icon]="faArrowDown"></fa-icon>
+        </a>
+        <a data-bs-target="#scanner" data-bs-toggle="modal">
+            <fa-icon [icon]="faCamera"></fa-icon>
+        </a>
+        <a routerLink="/home">
+            <fa-icon [icon]="faBook"></fa-icon>
+        </a>
+        <a routerLink="/voting">
+            <fa-icon [icon]="faTrophy"></fa-icon>
+        </a>
+        <a routerLink="/userSettings">
+            <fa-icon [icon]="faUser"></fa-icon>
+        </a>
+        <a (click)="logoutConfirm()">
+            <fa-icon [icon]="faArrowRightFromBracket"></fa-icon>
+        </a>
+    </nav>
+</div>
+
+<div *ngIf="role === 'admin'">
+    <!-- Admin nav -->
+    <nav class="fa nav-width" id="nav-bottom" id="nav">
+        <a (click)="onClick('banner')">
+            <fa-icon [icon]="faArrowUp"></fa-icon>
+        </a>
+        <a (click)="onClick('footer')">
+            <fa-icon [icon]="faArrowDown"></fa-icon>
+        </a>
+        <a routerLink="/adminHomePage">
+            <fa-icon [icon]="faHouse"></fa-icon>
+        </a>
+        <a routerLink="/proposedBooks">
+            <fa-icon [icon]="faBook"></fa-icon>
+        </a>
+        <a routerLink="/userSettings">
+            <fa-icon [icon]="faUser"></fa-icon>
+        </a>
+        <a (click)="logoutConfirm()">
+            <fa-icon [icon]="faArrowRightFromBracket"></fa-icon>
+        </a>
+    </nav>
+</div>
+
+<app-scanner></app-scanner>

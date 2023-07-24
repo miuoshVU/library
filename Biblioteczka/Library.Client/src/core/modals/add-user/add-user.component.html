@@ -1,0 +1,45 @@
+
+<!-- Book Modal -->
+<div class="modal text-white go-down-animation" id="addUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modalBack">
+  
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dodaj użytkownika </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Imię: </div>
+            <input type="text" [(ngModel)]="user.firstName" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Nazwisko: </div>
+            <input type="text" [(ngModel)]="user.lastName" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Rola: </div>
+            <ng-multiselect-dropdown class="text-white d-inline w-50"
+            [placeholder]="'Wybierz rolę'"
+            [settings]="dropdownSettings"
+            [data]="roles"
+            [(ngModel)]="selectedRole"
+            (onSelect)="onItemSelect($event)">
+          </ng-multiselect-dropdown>
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>E-mail: </div>
+            <input type="text" [(ngModel)]="user.email" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Hasło: </div>
+            <input type="text" [(ngModel)]="passwd" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" (click)="addUser(user)">Dodaj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

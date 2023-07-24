@@ -1,0 +1,338 @@
+.row_posterLarge {
+    height: 500px;
+    width: 300px;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .row_posterLarge {
+        max-height: 300px;
+        max-width: 200px;
+    }
+}
+
+.row {
+    color: white;
+    margin-left: 20px;
+    margin-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+    h3 {
+        margin-top: 100px !important;
+    }
+}
+
+input[type="search"]::placeholder {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+select {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+.marg {
+    margin-top: 5%;
+}
+
+@media only screen and (max-width: 576px) {
+    .marg {
+        width: 70% !important;
+    }
+
+    .col-height {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        height: max-content !important;
+    }
+
+    .img-modal {
+        height: 450px !important;
+        width: 90% !important;
+    }
+
+    .modal-content {
+        width: 100% !important;
+    }
+}
+
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+a:focus {
+    outline: none;
+}
+
+.fade {
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111)
+}
+
+a.row_poster {
+    display: flex;
+    justify-content: center;
+}
+
+button,
+.btn-style {
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+.modal-confirm {
+    color: #636363;
+    width: 400px;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+
+.modal-confirm .modal-body {
+    color: #999;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+    color: #999;
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.modal-confirm .btn,
+.modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    margin: 0 5px;
+}
+
+.modal-confirm .btn-secondary:hover {
+    background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+    background: red;
+}
+
+.modal-confirm .btn-danger:hover,
+.modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+.blur-modal {
+    backdrop-filter: blur(15px);
+    border-radius: 15px !important;
+    background-color: rgba(55, 168, 60, 0.5)
+}
+
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+.img-modal {
+    width: 60%;
+    height: 600px;
+}
+
+@media (max-width: 991.98px) {
+    .book-img {
+        height: 600px !important;
+        width: 100% !important;
+    }
+}
+
+.nav {
+    pointer-events: none;
+}
+
+button {
+    min-width: 130px;
+    min-height: 40px;
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+.btn-close {
+    min-width: unset;
+    min-height: unset;
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+.book-img {
+    height: 400px;
+    width: 100%;
+    border: 2px solid #fff;
+}
+
+.input-width2 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+}
+
+.btn-style {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.input-width {
+    width: 60%;
+}
+
+input[type="text"],
+textarea,
+select {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+textarea:focus {
+    color: black !important;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    color: black !important;
+    background: white;
+}
+
+.col-height {
+    height: 650px
+}
+
+.clock {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    background-image:
+        radial-gradient(circle at center, #333 8px, transparent 8px),
+        radial-gradient(circle at center, white 50%, transparent 50%, transparent 65%, white 65%),
+        linear-gradient(to right, transparent 50%, #333 50%, transparent 51%),
+        linear-gradient(to bottom, transparent 50%, #333 50%, transparent 51%),
+        linear-gradient(-30deg, transparent 50%, #333 50%, transparent 51%),
+        linear-gradient(30deg, transparent 50%, #333 50%, transparent 51%),
+        linear-gradient(60deg, transparent 50%, #333 50%, transparent 51%),
+        linear-gradient(-60deg, transparent 50%, #333 50%, transparent 51%);
+}
+
+.hour-hand {
+    position: absolute;
+    height: 40px;
+    width: 4px;
+    margin: auto;
+    top: -20%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background-color: #333;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+}
+
+.minute-hand {
+    position: absolute;
+    height: 60px;
+    width: 4px;
+    margin: auto;
+    top: -30%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background-color: #333;
+    transform-origin: bottom;
+    transform: rotate(90deg);
+}
+
+.second-hand {
+    position: absolute;
+    height: 60px;
+    width: 2px;
+    margin: auto;
+    top: -30%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background-color: #333;
+    transform-origin: bottom;
+    transform: rotate(180deg);
+}

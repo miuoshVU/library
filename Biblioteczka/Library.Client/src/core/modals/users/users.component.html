@@ -1,0 +1,103 @@
+<!-- All User Modal -->
+<div class="modal text-white go-down-animation" id="users" tabindex="7" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+    <div class="modal-content modalBack">
+
+      <div class="modal-header position-relative">
+        <h1 class="modal-title" id="exampleModalLabel"> Zarządzaj użytkownikami</h1>
+        <a class="position-absolute" data-bs-target="#addUser" data-bs-toggle="modal"><i
+            class="fa-solid fa-circle-plus"></i></a>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="container mt-5 p-0 pt-4 table-layout">
+          <h2 class="text-white text-center">Lista użytkowników</h2>
+          <div>
+            <table class="table text-white bg-dark table-striped table-hover tab">
+              <thead class="tab-header">
+                <tr>
+                  <th scope="col" class="col1-width">Lp.</th>
+                  <th scope="col">Imię i nazwisko</th>
+                  <th scope="col">E-mail</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr *ngFor="let user of users; let i = index">
+                  <td class="col1-width">{{i + 1}}</td>
+                  <td>{{user.firstName + ' ' + user.lastName}}</td>
+                  <td class="inline">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <span>
+                          {{user.email}}
+                        </span>
+                      </div>
+                      <div>
+                        <a [attr.data-bs-target]="'#editUser'+user.id" (click)="getInfo(user)" data-bs-toggle="modal">
+                          <fa-icon [icon]="faPencil"></fa-icon>
+                        </a>
+                        <a (click)="deleteUser(user.id)">
+                          <fa-icon [icon]="faTrash"></fa-icon>
+                        </a>
+                      </div>
+                    </div>
+
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let user of users">
+  <!-- Edit user Modal -->
+  <div class="modal text-white go-down-animation" [id]="'editUser'+user.id" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modalBack">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edytuj użytkownika </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Imię: </div>
+            <input type="text" [(ngModel)]="user.firstName" placeholder=""
+              class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Nazwisko: </div>
+            <input type="text" [(ngModel)]="user.lastName" placeholder=""
+              class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Rola: </div>
+            <ng-multiselect-dropdown class="text-white d-inline w-50" [placeholder]="'Wybierz rolę'"
+              [settings]="dropdownSettings" [data]="roles" (ngModel)="selectedRole" (onSelect)="onItemSelect($event)">
+            </ng-multiselect-dropdown>
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>E-mail: </div>
+            <input type="text" [(ngModel)]="user.email" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <div>Hasło: </div>
+            <input type="text" [(ngModel)]="passwd" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal" (click)="editUser(user)">Zapisz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

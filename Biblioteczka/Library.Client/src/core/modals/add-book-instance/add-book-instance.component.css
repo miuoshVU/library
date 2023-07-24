@@ -1,0 +1,85 @@
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+
+.blur-modal {
+	backdrop-filter: blur(15px);
+	border-radius: 15px !important;
+	background-color: rgba(55, 168, 60, 0.5)
+}
+
+.modalBack {
+	background-color: rgba(0, 0, 0, .75) !important;
+}
+
+.img-modal {
+	width: 100%;
+	height: 600px;
+}
+
+@media (max-width: 991.98px) {
+	.book-img {
+		height: 600px !important;
+		width: 100% !important;
+	}
+}
+
+
+button {
+	background-color: rgba(55, 168, 60, 0.7);
+}
+
+.btn-close {
+	min-width: unset;
+	min-height: unset;
+}
+
+button:hover {
+	background-color: rgba(55, 168, 60);
+	transition: all 0.2s;
+}
+
+.book-img {
+	height: 400px;
+	width: 100%;
+	border: 2px solid #fff;
+}
+
+.input-width2 {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 100%;
+}
+
+.btn-style {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.input-width {
+	width: 60%;
+}
+
+input[type="text"],
+textarea,
+select {
+	color: rgb(29, 20, 20);
+	background: #333;
+	border: 0;
+}
+
+textarea:focus {
+	color: black !important;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+	color: black !important;
+	background: white;
+}
+
+.col-height {
+	height: 650px
+}

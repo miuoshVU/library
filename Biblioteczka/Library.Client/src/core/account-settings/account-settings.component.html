@@ -1,0 +1,67 @@
+<!-- <div class="nav" id="nav"> -->
+<!-- <img src="../../../../assets/images/rekord-si-white.png" alt="" class="nav_logo"> -->
+<!-- <img src="images/netflix-avatar.png" alt="" class="nav_avatar">  -->
+<!-- </div>   -->
+
+<div class="banner" id="banner">
+    <div class="banner_contents text-center text-sm-start go-left-right-animation">
+        <h2 class="text-center text-sm-start position-relative"> Twoje konto </h2>
+        <h1 class="banner_title text-center position-relative"> {{name}}</h1>
+    </div>
+    <div class="banner_fadeBottom"></div>
+</div>
+
+<!-- [(ngModel)]="user.email" 
+[(ngModel)]="user.password"  -->
+<div class="login-body my-5">
+    <div class="hybrid-login-form hybrid-login-form-signup d-flex justify-content-center">
+        <div class="w-100 pad">
+            <h2> Dane Twojego konta </h2>
+            <form class="login-form w-100">
+                <div class="input-pad">
+                    <div class="form-outline">
+                        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+                            placeholder="E-mail" class="form-control input-style" />
+                    </div>
+                </div>
+                <div class="input-pad">
+                    <div class="form-outline">
+                        <input type="text" [(ngModel)]="email1" [ngModelOptions]="{standalone: true}"
+                            placeholder="Potwierdź e-mail" class="form-control input-style" />
+                    </div>
+                </div>
+                <div class="input-pad">
+                    <div class="form-outline">
+                        <input type="password" [(ngModel)]="paswd" [ngModelOptions]="{standalone: true}"
+                            placeholder="Hasło" class="form-control input-style" />
+                    </div>
+                </div>
+                <div class="input-pad">
+                    <div class="form-outline">
+                        <input type="password" [(ngModel)]="paswd1" [ngModelOptions]="{standalone: true}"
+                            placeholder="Potwierdź hasło" class="form-control input-style" />
+                    </div>
+                </div>
+                <div class="container-1-pad">
+                    <div class="form-outline">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-white" for="flexCheckDefault">
+                                Włącz powiadomienia e-mail
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- (click)="saveData(user.email, user.password, checkboxStatus)" -->
+                <button type="button" (click)="editLoginData()" class="btn btn-lg w-100 text-center">
+                    <div class="font-dim">
+                        Potwierdź zmianę
+                    </div>
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<app-navbar></app-navbar>

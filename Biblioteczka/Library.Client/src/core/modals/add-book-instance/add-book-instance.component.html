@@ -1,0 +1,52 @@
+<!-- Add/Edit Book -->
+
+<div class="modal text-white go-down-animation" id="addBookInstance" tabIndex="7" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content modalBack">
+
+            <div class="modal-header">
+                <h2 class="modal-title w-100 text-center" id="exampleModalLabel">Dodaj instancję książki</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-0">
+                <div class="row m-0">
+                    <div class="col-height d-flex align-items-center">
+                        <div class="w-100">
+                            <div class="pb-2 d-flex justify-content-between align-items-center">
+                                <div>Tytuł: </div>
+                                <ng-multiselect-dropdown class="input-width" [placeholder]="'Wybierz tytuł'"
+                                    [data]="titles" [(ngModel)]="selectedTitle" [settings]="dropdownSettings"
+                                    (onSelect)="onItemSelect($event)">
+                                </ng-multiselect-dropdown>
+                            </div>
+                            <div class="pb-2 d-flex justify-content-between align-items-center">
+                                <div>Miejsce: </div>
+                                <ng-multiselect-dropdown class="input-width" [placeholder]="'Wybierz miejsce'"
+                                    [settings]="dropdownSettings" [data]="spots" [(ngModel)]="selectedSpot"
+                                    (onSelect)="onItemSelect1($event)">
+                                </ng-multiselect-dropdown>
+                            </div>
+                            <div class="pb-2 d-flex justify-content-between align-items-center">
+                                <div>Właściciel: </div>
+                                <input type="text" placeholder="" [(ngModel)]="owner"
+                                    class="form-control text-white d-inline input-width" />
+                            </div>
+                            <div class="pb-2 d-flex justify-content-between align-items-center">
+                                <div>Status: </div>
+                                <ng-multiselect-dropdown class="input-width" [placeholder]="'Wybierz status'"
+                                    [settings]="dropdownSettings" [data]="states" [(ngModel)]="selectedState"
+                                    (onSelect)="onItemSelect2($event)">
+                                </ng-multiselect-dropdown>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer d-sm-flex justify-content-center">
+                        <button type="button" class="btn" (click)="addBook(owner)"
+                            data-bs-dismiss="modal">Dodaj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

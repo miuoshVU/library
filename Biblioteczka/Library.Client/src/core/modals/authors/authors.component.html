@@ -1,0 +1,43 @@
+<!-- All Books Modal -->
+<div class="modal text-white go-down-animation" id="authors" tabindex="7" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+        <div class="modal-content modalBack">
+
+            <div class="modal-header position-relative">
+                <h1 class="modal-title" id="exampleModalLabel">Zarządzaj Autorami</h1>
+                <a class="position-absolute" data-bs-target="#addAuthor" data-bs-toggle="modal"><i
+                        class="fa-solid fa-circle-plus"></i></a>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mb-5">
+                        <div *ngFor="let author of authors" class="col-4">
+                            <div class="box d-flex">
+                                <div class="col1-width d-flex justify-content-center align-items-center">
+                                    {{author.firstName + ' ' + author.lastName}}
+                                </div>
+                                <div class="inner-box d-flex justify-content-center align-items-center">
+                                    {{author.bookCount}}
+                                </div>
+                                <div class="inner-box d-flex justify-content-center align-items-center">
+                                    <a class="d-flex align-items-center" data-bs-toggle="modal"
+                                        [attr.data-bs-target]="'#editModal'+author.id">
+                                        <i class="fa-solid fa-square-pen pencil-color"></i>
+                                    </a>
+                                </div>
+                                <div class="inner-box d-flex justify-content-center align-items-center">
+                                    <a class="d-flex align-items-center" (click)="deleteAuthor(author)">
+                                        <i class="fa-solid fa-circle-minus trash-color"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

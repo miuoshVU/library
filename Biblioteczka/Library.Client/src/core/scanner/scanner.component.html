@@ -1,0 +1,47 @@
+<!-- Modal Scanner -->
+<div class="modal" id="scanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-body p-0" style="z-index: 50">
+        <div class="qr-scanner h-100 w-100">
+          <div class="box">
+            <zxing-scanner *ngIf="display" class="scanner-position" (scanSuccess)="onCodeResult($event)">
+            </zxing-scanner>
+            <div class="line"></div>
+            <div class="angle"></div>
+          </div>
+        </div>
+        <button type="button" class="btn-close button-position" data-bs-dismiss="modal" aria-label="Close"
+          style="z-index: 100"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast scanner info -->
+<div class="toast-container position-fixed top-0 start-50 translate-middle-x">
+  <div id="liveToastInfo" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-header">
+      <i class="fa-solid fa-circle-info fa-lg me-2 text-primary"></i>
+      <strong class="me-auto text-dark">Informacja</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-white">
+      Zeskanuj kod QR książki
+    </div>
+  </div>
+</div>
+
+<!-- Toast scanner info -->
+<div class="toast-container position-fixed top-0 start-50 translate-middle-x">
+  <div id="liveToastInfo1" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-header">
+      <i class="fa-solid fa-circle-info fa-lg me-2 text-primary"></i>
+      <strong class="me-auto text-dark">Informacja</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-white">
+      Zeskanuj kod QR miejsca
+    </div>
+  </div>
+</div>

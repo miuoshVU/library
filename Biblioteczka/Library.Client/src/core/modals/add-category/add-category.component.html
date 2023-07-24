@@ -1,0 +1,32 @@
+
+<!-- Book Modal -->
+<div class="modal text-white go-down-animation" id="addCategory" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modalBack">
+  
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Dodaj kategorię </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="pb-2 d-flex justify-content-between align-items-center mb-3">
+            <div>Nazwa kategorii: </div>
+            <input type="text" [(ngModel)]="category.name" placeholder="" class="form-control text-white d-inline w-50" />
+          </div>
+          <div class="pb-2 d-flex justify-content-between align-items-center">
+            <img [src]="category.cover" class="img-modal">
+          </div>
+            <div class="d-flex mt-4 mb-4">
+              <input type="text" placeholder="" [(ngModel)]="category.cover"
+                  class="form-control text-white input-width2" />
+              <span class="btn btn-style text-center">URL</span>
+                  </div>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal" (click)="addCategory(category)">Dodaj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

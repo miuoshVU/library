@@ -1,0 +1,263 @@
+.pencil-color {
+    color: #FD6E00
+}
+
+.book-img {
+    height: 600px;
+    width: 60%;
+}
+
+@media (max-width: 991.98px) {
+    .book-img {
+        height: 600px !important;
+        width: 100% !important;
+    }
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+.blur-modal {
+    backdrop-filter: blur(15px);
+    border-radius: 15px !important;
+    background-color: rgba(55, 168, 60, 0.5)
+}
+
+.form-select {
+    width: unset;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.icon-position {
+    top: 5px;
+    right: 5px;
+}
+
+input[type="text"],
+textarea {
+    color: rgb(29, 20, 20);
+    background: #333;
+    border: 0;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    color: black !important;
+    background: white;
+}
+
+.row_posterLarge {
+    height: 500px;
+    width: 300px;
+    border-radius: 1rem;
+}
+
+.row_posterLarge1 {
+    height: 500px;
+    border-radius: 1rem;
+    width: 100% !important;
+}
+
+.input-group-text {
+    background: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 90px;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
+}
+
+ul li {
+    border-bottom: 3px solid #fff;
+    font-size: 21px;
+    font-weight: 400;
+    padding: 5px;
+    overflow: hidden;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+.modal-animation {
+    animation: goDown 1s ease;
+}
+
+.align-icons {
+    top: 5px;
+    right: 20px;
+    background-color: #111;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .row_posterLarge {
+        max-height: 300px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .align-input {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-width {
+        width: 80% !important;
+    }
+
+    #bookModalAll img {
+        height: 400px !important;
+    }
+
+    #bookModal img {
+        height: 400px !important;
+    }
+
+    #rentedBook img {
+        height: 400px !important;
+    }
+
+    .row_posterLarge {
+        max-height: 210px;
+        max-width: 130px;
+    }
+
+    .row_posterLarge1 {
+        height: 250px;
+        border-radius: 1rem;
+    }
+}
+
+.input-width {
+    width: 50% !important;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .input-width {
+        width: 50% !important;
+    }
+}
+
+.row {
+    color: white;
+    margin-left: 20px;
+    margin-right: 0 !important;
+}
+
+button,
+span {
+    background-color: rgba(55, 168, 60, 0.7);
+}
+
+button:hover {
+    background-color: rgba(55, 168, 60);
+    transition: all 0.2s;
+}
+
+.btn-style {
+    pointer-events: none;
+}
+
+.input-width2 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    /* width: 100%; */
+}
+
+.box-width {
+    width: 60%;
+}
+
+.btn-style {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+input[type="search"]::placeholder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marg {
+    margin-top: 5%;
+}
+
+.modalBack {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+a:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.fade {
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111)
+}
+
+a.row_poster {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    cursor: pointer;
+}
+
+.font-s {
+    font-size: 30px;
+}
+
+.img-modal {
+    width: 80%;
+    height: 600px;
+}
+
+.icon-margin {
+    margin-right: 50px;
+}
+
+.row-margin {
+    margin-bottom: 10px;
+}
+
+fa-icon {
+    font-size: 30px;
+}
+
+i {
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    bottom: 27px;
+    right: 60px;
+    color: unset;
+}

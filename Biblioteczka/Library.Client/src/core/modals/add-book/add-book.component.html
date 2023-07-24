@@ -1,0 +1,83 @@
+<!-- Add/Edit Book -->
+
+<div class="modal text-white go-down-animation" id="addBook" tabIndex="7" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content modalBack">
+
+            <div class="modal-header">
+                <h2 class="modal-title w-100 text-center" id="exampleModalLabel">Dodaj książkę</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-0">
+                <div class="row m-0">
+                    <div class="col-5 col-height d-flex align-items-center">
+                        <div class="w-100">
+                            <div class="pb-2 d-flex justify-content-between align-items-center">
+                                <div>Tytuł: </div>
+                                <input type="text" placeholder="" [(ngModel)]="book.title"
+                                    class="form-control text-white d-inline input-width" />
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                <div> Autorzy: </div>
+                                <ng-multiselect-dropdown [placeholder]="'Wybierz autorów'" class="input-width"
+                                    [settings]="dropdownSettings" [data]="authors" [(ngModel)]="selectedAuthors">
+                                </ng-multiselect-dropdown>
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                <div>Kategorie: </div>
+                                <ng-multiselect-dropdown class="input-width" [placeholder]="'Wybierz kategorie'"
+                                    [settings]="dropdownSettings" [data]="categories" [(ngModel)]="selectedCategories">
+                                </ng-multiselect-dropdown>
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                ISBN:
+                                <input type="text" placeholder="" [(ngModel)]="book.iSBN"
+                                    class="form-control text-white d-inline input-width" />
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                Rok publikacji:
+                                <input type="text" placeholder="" [(ngModel)]="book.yearOfPublication"
+                                    class="form-control text-white d-inline input-width" />
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                Wydawca:
+                                <input type="text" placeholder="" [(ngModel)]="book.publisher"
+                                    class="form-control text-white d-inline input-width" />
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                Ilość stron:
+                                <input type="text" placeholder="" [(ngModel)]="book.pages"
+                                    class="form-control text-white d-inline input-width" />
+                            </div>
+                            <div class="py-2 d-flex justify-content-between align-items-center">
+                                Opis:
+                                <textarea type="text" row="4" placeholder="" [(ngModel)]="book.description"
+                                    class="form-control text-white d-inline input-width"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7 col-height d-flex align-items-center">
+                        <div class="container d-flex justify-content-center w-100">
+                            <div class="w-100">
+                            <div class="d-flex justify-content-center w-100">
+                            <img [src]="book.cover" class="book-img">
+                            </div>
+                            <div class="d-flex justify-content-center w-100">                 
+                            <div class="d-flex mt-4 mb-4 box-width">
+                            <input type="text" [(ngModel)]="book.cover" placeholder=""
+                                class="form-control text-white input-width2" />
+                                <span class="btn btn-style text-center">URL</span>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <div class="modal-footer d-sm-flex justify-content-center">
+                        <button type="button" class="btn" data-bs-dismiss="modal" (click)="addBook(book)">Dodaj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
