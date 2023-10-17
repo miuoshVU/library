@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ACi2tmsO+kNlxv+dSwCtD/TEyE3ut5jybphTsc4j77lX5elb62lE3RBmZI2oDhbJ49uj5p9UFunzMbAalQ4niA==",
+  "dgSpecHash": "OOj6W8xgJDmG3MZMEVIv2gh2tfifnWEohxm2Zid3Qpjkt3JTDpJbm2Q7Ls+JEn2/wKSo7N352hjvPwqVRAYJNA==",
   "success": true,
-  "projectFilePath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/Library.Repository.csproj",
+  "projectFilePath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/Library.Repository.csproj",
   "expectedPackageFiles": [
     "/Users/miloszwloch/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
     "/Users/miloszwloch/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

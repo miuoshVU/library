@@ -35,7 +35,7 @@ namespace Library.CodeFirstDatabase.Migrations
                 table: "Proposed_Books",
                 type: "text",
                 nullable: false,
-                defaultValue: "");
+                defaultValue: "dadasda");
 
             migrationBuilder.AddColumn<string>(
                 name: "Categories",

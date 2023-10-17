@@ -86,6 +86,7 @@ namespace Library.Service
                 .RuleFor(i => i.OwnerName, f => f.Name.FullName());
 
             var proposedBookGenerator = new Faker<ProposedBook>()
+                .RuleFor(p => p.Cover, f => new Uri("https://lexliber.pl/userdata/public/gfx/15444/default.jpg"))
                 .RuleFor(p => p.Title, f => f.Commerce.ProductMaterial())
                 .RuleFor(p => p.UrlLink, f => new Uri("https://www.taniaksiazka.pl/ksiazka/outsider-stephen-king"))
                 .RuleFor(p => p.Points, f => 1);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.API/Library.API.csproj": {}
+    "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.API/Library.API.csproj": {}
   },
   "projects": {
-    "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.API/Library.API.csproj": {
+    "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.API/Library.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.API/Library.API.csproj",
+        "projectUniqueName": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.API/Library.API.csproj",
         "projectName": "Library.API",
-        "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.API/Library.API.csproj",
+        "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.API/Library.API.csproj",
         "packagesPath": "/Users/miloszwloch/.nuget/packages/",
-        "outputPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.API/obj/",
+        "outputPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/miloszwloch/.nuget/NuGet/NuGet.Config"
@@ -26,14 +26,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Application/Library.Application.csproj": {
-                "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Application/Library.Application.csproj"
+              "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Application/Library.Application.csproj": {
+                "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Application/Library.Application.csproj"
               },
-              "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj": {
-                "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj"
+              "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj": {
+                "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj"
               },
-              "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/Library.Repository.csproj": {
-                "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/Library.Repository.csproj"
+              "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/Library.Repository.csproj": {
+                "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/Library.Repository.csproj"
               }
             }
           }
@@ -93,7 +93,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -105,18 +106,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.415/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Application/Library.Application.csproj": {
+    "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Application/Library.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Application/Library.Application.csproj",
+        "projectUniqueName": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Application/Library.Application.csproj",
         "projectName": "Library.Application",
-        "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Application/Library.Application.csproj",
+        "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Application/Library.Application.csproj",
         "packagesPath": "/Users/miloszwloch/.nuget/packages/",
-        "outputPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Application/obj/",
+        "outputPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/miloszwloch/.nuget/NuGet/NuGet.Config"
@@ -184,7 +185,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -193,18 +195,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.415/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj": {
+    "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj",
+        "projectUniqueName": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj",
         "projectName": "Library.CodeFirstDatabase",
-        "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj",
+        "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj",
         "packagesPath": "/Users/miloszwloch/.nuget/packages/",
-        "outputPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/obj/",
+        "outputPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/miloszwloch/.nuget/NuGet/NuGet.Config"
@@ -268,7 +270,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -277,18 +280,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.415/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/Library.Repository.csproj": {
+    "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/Library.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/Library.Repository.csproj",
+        "projectUniqueName": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/Library.Repository.csproj",
         "projectName": "Library.Repository",
-        "projectPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/Library.Repository.csproj",
+        "projectPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/Library.Repository.csproj",
         "packagesPath": "/Users/miloszwloch/.nuget/packages/",
-        "outputPath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.Repository/obj/",
+        "outputPath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.Repository/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/miloszwloch/.nuget/NuGet/NuGet.Config"
@@ -356,7 +359,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -365,7 +369,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.415/RuntimeIdentifierGraph.json"
         }
       }
     }

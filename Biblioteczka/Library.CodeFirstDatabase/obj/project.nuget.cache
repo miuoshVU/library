@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3J7byGVpMeghlVVp1PGZ+accx7hz+V7ZNHNwqXGSDTE+vJ4rwoX6fEDSG0wVscvNfTbQbIPnSrXvhHrVqHRYvQ==",
+  "dgSpecHash": "fn3nhul51wniT3jIG7cJGYLpuIgArYrISVY/pvflvuuQkqknCC55d/DN3eVPiiIDx0mYCwYwnohhEYbaysH8zQ==",
   "success": true,
-  "projectFilePath": "/Users/miloszwloch/Documents/repo1/Biblioteczka/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj",
+  "projectFilePath": "/Users/miloszwloch/Documents/react/library/Biblioteczka/Library.CodeFirstDatabase/Library.CodeFirstDatabase.csproj",
   "expectedPackageFiles": [
     "/Users/miloszwloch/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
     "/Users/miloszwloch/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
