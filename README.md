@@ -46,4 +46,4 @@ npx ng serve
 ```
 ---
 > After running the program make sure to run the endpoint called */seeder* to fill in a database.  
-Open [localhost](http://localhost:4200) to view client side. ![Alt text](image.png) Access all the endpoints by going to [swagger webpage](https://localhost:7221/swagger/index.html). ![Alt text](image-1.png)
+Open [localhost](http://localhost:4200) to view client side. ![Alt text](https://github.com/miuoshVU/library/blob/main/Readme.Files/image.png?raw=true) Access all the endpoints by going to [swagger webpage](https://localhost:7221/swagger/index.html). ![image-1.png](https://github.com/miuoshVU/library/blob/main/Readme.Files/image-1.png?raw=true)
