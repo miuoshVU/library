@@ -1,5 +1,5 @@
 # Library
-### Backend: .NET6
+### Backend: .NET 6.0
 ### Frontend: Angular TypeScript
 
 # Installation
@@ -45,5 +45,8 @@ or without installing Angular by using npx (installed with npm)
 npx ng serve
 ```
 ---
-> After running the program make sure to run the endpoint called */seeder* to fill in a database.  
-Open [localhost](http://localhost:4200) to view client side. ![Alt text](https://github.com/miuoshVU/library/blob/main/Readme.Files/image.png?raw=true) Access all the endpoints by going to [swagger webpage](https://localhost:7221/swagger/index.html). ![image-1.png](https://github.com/miuoshVU/library/blob/main/Readme.Files/image-1.png?raw=true)
+> ### After running the program make sure to run the endpoint called */seeder* to fill in a database.  
+### Open [localhost](http://localhost:4200) to view client side. 
+![Alt text](https://github.com/miuoshVU/library/blob/main/Readme.Files/image.png?raw=true) 
+### Access all the endpoints by going to [swagger webpage](https://localhost:7221/swagger/index.html). 
+![image-1.png](https://github.com/miuoshVU/library/blob/main/Readme.Files/image-1.png?raw=true)
