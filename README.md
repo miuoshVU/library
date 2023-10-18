@@ -45,3 +45,5 @@ or without installing Angular by using npx (installed with npm)
 npx ng serve
 ```
 ---
+> After running the program make sure to run the endpoint called */seeder* to fill in a database.  
+Open [localhost](http://localhost:4200) to view client side. ![Alt text](image.png) Access all the endpoints by going to [swagger webpage](https://localhost:7221/swagger/index.html). ![Alt text](image-1.png)
